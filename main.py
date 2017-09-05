@@ -9,13 +9,13 @@ from pprint import pprint
 from src.matcher import Matcher
 
 #Define constants
-source_data_path = 'source_data.json'
-match_file_path = 'match_file.csv'
-full_address = ["street", "street_2", "city", "state", "zip"]
-npi = "npi"
-full_name = ["first_name", "last_name"]
+SOURCE_DATA_PATH = 'source_data.json'
+MATCH_FILE_PATH = 'match_file.csv'
+FULL_ADDRESS = ["street", "street_2", "city", "state", "zip"]
+NPI = "npi"
+FULL_NAME = ["first_name", "last_name"]
 
 if __name__ == '__main__':
     print("Running full solution")
-    matcher = Matcher(full_address, npi, full_name)
-    pprint(matcher.get_solution(match_file_path, source_data_path))
+    matcher = Matcher(FULL_ADDRESS, NPI, FULL_NAME)
+    pprint(matcher.get_solution(MATCH_FILE_PATH, SOURCE_DATA_PATH))

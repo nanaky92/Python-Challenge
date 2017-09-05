@@ -11,7 +11,8 @@ class Matcher:
         self.npi = npi
         self.full_name = full_name
 
-    def _get_left_unmatched_original_documents(self, raw_data_df, source_df, on):
+    @staticmethod
+    def _get_left_unmatched_original_documents(raw_data_df, source_df, on):
         '''Return the documents from the left df that were not matched by the on'''
         merged_df = pd.merge(raw_data_df, 
                             source_df, 
@@ -60,7 +61,8 @@ class Matcher:
                         how="inner", 
                         on=self.full_name+self.full_address).shape[0]    
 
-    def _calculate_documents_not_matched_from_partials(self, left_df, right_df):
+    @staticmethod
+    def _calculate_documents_not_matched_from_partials(left_df, right_df):
         return pd.merge(left_df, 
                         right_df, 
                         how="inner", 

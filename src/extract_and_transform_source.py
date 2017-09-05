@@ -1,14 +1,12 @@
 import json
-from pprint import pprint
 
-import pandas as pd
 from pandas.io.json import json_normalize
 
 class ExtractAndTransformSource:
 
     @staticmethod
     def extract_source_data(source_file):
-        ''' Form a list of dictionaries from a file with a json doc per line''' 
+        ''' Form a list of dictionaries from a file with a json doc per line'''
         source_data = []
         with open(source_file) as f:
             for line in f:
@@ -19,7 +17,7 @@ class ExtractAndTransformSource:
     @staticmethod
     def get_formatted_not_unwinded_fields(source_series, fields_not_to_unwind):
         '''Form a list of lists with the path to the fields inside fields_to_unwind,
-        and a dict mapping this path to the subfields 
+        and a dict mapping this path to the subfields
         
         These are needed in order to use the json_normalize in pandas.io.json.
         
