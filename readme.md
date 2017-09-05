@@ -4,7 +4,7 @@ This repository contains the solution to the BD coding challenge for a python an
 
 We can differentiate two parts in this repo:
 - Jupyter Notebook
-- The rest of it
+- The rest of the files
 
 ## Jupyter Notebook
 
@@ -51,7 +51,3 @@ pip install pandas
 There are 6 unittests, that can be run like this:
 
 ```python -m unittest discover -s test/ -v```
-
-## Notes
-
-My goal was to make this package pip-installable, in the same way I have done for the [other BD coding challenge](https://github.com/nanaky92/BetterAPI), but I did not have enough time in the last week.
