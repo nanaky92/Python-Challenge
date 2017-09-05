@@ -14,11 +14,16 @@ A jupyter notebook has been created with the whole thought process, and the solu
 
 It requires only two dependencies, jupyter notebook and pandas. These are already included in Anaconda. Alternatively, we can use pip or miniconda to download them:
 
-```conda install pandas
-conda install jupyter```
+```
+conda install pandas
+conda install jupyter
+```
 or
-```pip install pandas
-pip install jupyter```
+
+```
+pip install pandas
+pip install jupyter
+```
 
 
 ### Start
