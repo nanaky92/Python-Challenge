@@ -10,7 +10,7 @@ We can differentiate two parts in this repo:
 
 A jupyter notebook has been created with the whole thought process, and the solution to the problem. It also contains ideas that are not part of the final solution but that help us understand better the problem.
 
-## Install
+### Install
 
 It requires only two dependencies, jupyter notebook and pandas. These are already included in Anaconda. Alternatively, we can use pip or miniconda to download them:
 
@@ -18,24 +18,35 @@ It requires only two dependencies, jupyter notebook and pandas. These are alread
 conda install jupyter```
 or
 ```pip install pandas
-pip install```
+pip install jupyter```
 
-## Start
+
+### Start
+
+```jupyter notebook```
 
 ## The rest of the repository
 
 The rest of the repository contains the same code as the jupyter, but better organized, refactored and with tests. 
-## Install
-conda install pandas
-conda install jupyter
-pip install pandas
-pip install 
-## Start
 
-## Test
-python -m unittest discover -s test/ -v
+For example, we can change what we consider an address, or a name, by editting a setting in main.py, and the program will not break (as long as it is part of the columns of the csv, of course).
+
+### Install
+
+Same as before, but this time we only need pandas.
+```
+pip install pandas
+``` 
+### Start
+
+```python main.py```
+
+### Test
+
+There are 6 unittests, that can be run like this:
+
+```python -m unittest discover -s test/ -v```
 
 ## Notes
 
-Python
-Further refactoring 
+My goal was to make this package pip-installable, in the same way I have done for the [other BD coding challenge](https://github.com/nanaky92/BetterAPI), but I did not have enough time in the last week.
