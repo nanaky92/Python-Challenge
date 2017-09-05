@@ -74,7 +74,7 @@ class TestExtractAndTransformSource(unittest.TestCase):
 
     def test_transform_source_data_unwinding_fields(self):
         unwinded_df = \
-            ExtractAndTransformSource.transform_source_data_unwinding_fields(
+            ExtractAndTransformSource.transform_source_unwinding(
                 self.json_list,
                 self.fields_to_unwind,
                 self.fields_not_to_unwind)
@@ -86,7 +86,7 @@ class TestExtractAndTransformSource(unittest.TestCase):
         
     def test_transform_source_data_without_unwinding(self):
         not_unwinded_df = \
-            ExtractAndTransformSource.transform_source_data_without_unwinding(
+            ExtractAndTransformSource.transform_source_no_unwinding(
                 self.json_list,
                 self.fields_not_to_unwind)
 
